@@ -1,0 +1,27 @@
+
+not: bu sistemde, musteri.cs de interface ve diğernesne yönelimli kodlarkullanılmıştır.
+
+musteriMetotlar->interface kullanılmıştır.
+
+musteriAbstract -> MusteriSifre
+
+Anasinif->TuretilmisSinif1-Form1 kalıtım ve kapsilleme
+
+
+
+1- Çoklu datareader kullanımındaki sıkıntıyıo gidermek için yapılacaklar:
+
+1. yöntem Aynı bağlantı nesnesini yeniden kullanmak için öncelikle kapatıp yeniden açmak gerekir.  Böyle bir örneği yapmanın birkaç yöntemi bulunmaktadır;
+Birincisi aynı SqlDataReader içerisinde iki sorguyu SQL Server'i aynı transaction içerisinde göndermektir. Yani sorgumuz "SELECT * FROM Marka;SELECT * FROM Urun" şeklinde olacaktır. Bu ifade geriye iki tane record set döndürür. İlkini DataReader'i while döngüsünden geçirip okudukdan sonra DataReader nesnesinin NextResult() yordamı kullanılarak bir sonraki kayıt kümesine geçilir. O da aynı şekilde yeniden while döngüsüyle okunur.
+ 
+2. Yöntem ADO.NET 2.0 ile birlikte gelmiş ve SQL Server 2005 tarafından desteklenen MARS özelliğinin kullanılıyor olmasıdır. MARS (Multiple Active Result Sets), tek bağlantı nesnesi üzerinden aynı anda birden fazla sorgu veya stored procedure  çalıştırmaya izin veren bir özelliktir. MARS özelliğini kullanmak için bağlantı cümlesi içerisinde MultipleActiveResultSets parametresi true olarak düzenlenir. Örnek olarak aşağıdaki gibi yazılır.(Not: MARS Kullanımına, MS SQL Server ve Oracle destek veriyor şu an için.)
+ 
+Server=.;Database=Ornek;MultipleActiveResultSets=true; Uid=sa;Pwd=123
+ 
+3. yöntem ise DataReader nesnesinden uzak durup DataSet nesnesini kullanmaktır. Aynı şekilde aynı transaction içerisinde iki kayıt dizisi döndürüleceği için otomatik olarak ilk kayıt dizisi DataSet nesnesinin ilk tablosu diğeri de ikinci tablo olarak oluşturulur. Bundan sonra DataSet nesnesinin Tables property'sini kullanmaktır. 
+
+Kendi yöntemim ise, datareader yerine, bir execute.scaları bir object'e atıp null mu değil mi bakmak;) calisan.cs de de sifrepanelinde de öyle yaptım oldu ;)
+
+--------------------
+
+not: sql de parametre kullan! güvenlik için...

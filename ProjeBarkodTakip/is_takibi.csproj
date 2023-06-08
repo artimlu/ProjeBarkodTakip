@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58F80836-3C3C-4331-985A-89C113D51E67}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>is_takibi</RootNamespace>
+    <AssemblyName>is_takibi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ikonumuz.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data">
+      <HintPath>.\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnaSinif.cs" />
+    <Compile Include="Calisan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan.Designer.cs">
+      <DependentUpon>Calisan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalisanDepoGoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalisanDepoGoster.Designer.cs">
+      <DependentUpon>CalisanDepoGoster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmuhGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmuhGuncelle.Designer.cs">
+      <DependentUpon>CmuhGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SatinAlmaguncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SatinAlmaguncelle.Designer.cs">
+      <DependentUpon>SatinAlmaguncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepoGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepoGuncelle.Designer.cs">
+      <DependentUpon>DepoGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GelenSiparisGor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GelenSiparisGor.Designer.cs">
+      <DependentUpon>GelenSiparisGor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Depo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Depo.Designer.cs">
+      <DependentUpon>Depo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalisanDepo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalisanDepo.Designer.cs">
+      <DependentUpon>CalisanDepo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalisanIK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalisanIK.Designer.cs">
+      <DependentUpon>CalisanIK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIKguncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIKguncelle.Designer.cs">
+      <DependentUpon>CIKguncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalisanMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalisanMusteri.Designer.cs">
+      <DependentUpon>CalisanMusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMguncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMguncelle.Designer.cs">
+      <DependentUpon>CMguncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalisanKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalisanKayit.Designer.cs">
+      <DependentUpon>CalisanKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CKguncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKguncelle.Designer.cs">
+      <DependentUpon>CKguncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SatinAlma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SatinAlma.Designer.cs">
+      <DependentUpon>SatinAlma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CDguncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CDguncelle.Designer.cs">
+      <DependentUpon>CDguncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10.Designer.cs">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalisanMuhasebe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalisanMuhasebe.Designer.cs">
+      <DependentUpon>CalisanMuhasebe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11.Designer.cs">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalisanSatinAlma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalisanSatinAlma.Designer.cs">
+      <DependentUpon>CalisanSatinAlma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSAguncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSAguncelle.Designer.cs">
+      <DependentUpon>CSAguncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SifreGoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifreGoster.Designer.cs">
+      <DependentUpon>SifreGoster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalisanTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalisanTakip.Designer.cs">
+      <DependentUpon>CalisanTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TuretilmisSinif1.cs" />
+    <Compile Include="Uyelik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uyelik.Designer.cs">
+      <DependentUpon>Uyelik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9.Designer.cs">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface1.cs" />
+    <Compile Include="muhGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="muhGuncelle.Designer.cs">
+      <DependentUpon>muhGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Musteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Musteri.Designer.cs">
+      <DependentUpon>Musteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriAbstract.cs" />
+    <Compile Include="MusteriMetotlar.cs" />
+    <Compile Include="MusteriPaneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriPaneli.Designer.cs">
+      <DependentUpon>MusteriPaneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriSifre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriSifre.Designer.cs">
+      <DependentUpon>MusteriSifre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriTakip.Designer.cs">
+      <DependentUpon>MusteriTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SifrePaneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifrePaneli.Designer.cs">
+      <DependentUpon>SifrePaneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SifrePaneliCalisan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifrePaneliCalisan.Designer.cs">
+      <DependentUpon>SifrePaneliCalisan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takip.Designer.cs">
+      <DependentUpon>Takip.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Calisan.resx">
+      <DependentUpon>Calisan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalisanDepoGoster.resx">
+      <DependentUpon>CalisanDepoGoster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmuhGuncelle.resx">
+      <DependentUpon>CmuhGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SatinAlmaguncelle.resx">
+      <DependentUpon>SatinAlmaguncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepoGuncelle.resx">
+      <DependentUpon>DepoGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GelenSiparisGor.resx">
+      <DependentUpon>GelenSiparisGor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Depo.resx">
+      <DependentUpon>Depo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalisanDepo.resx">
+      <DependentUpon>CalisanDepo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalisanIK.resx">
+      <DependentUpon>CalisanIK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIKguncelle.resx">
+      <DependentUpon>CIKguncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalisanMusteri.resx">
+      <DependentUpon>CalisanMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMguncelle.resx">
+      <DependentUpon>CMguncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalisanKayit.resx">
+      <DependentUpon>CalisanKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CKguncelle.resx">
+      <DependentUpon>CKguncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SatinAlma.resx">
+      <DependentUpon>SatinAlma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CDguncelle.resx">
+      <DependentUpon>CDguncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10.resx">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalisanMuhasebe.resx">
+      <DependentUpon>CalisanMuhasebe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11.resx">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalisanSatinAlma.resx">
+      <DependentUpon>CalisanSatinAlma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSAguncelle.resx">
+      <DependentUpon>CSAguncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="muhGuncelle.resx">
+      <DependentUpon>muhGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Musteri.resx">
+      <DependentUpon>Musteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriPaneli.resx">
+      <DependentUpon>MusteriPaneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriSifre.resx">
+      <DependentUpon>MusteriSifre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriTakip.resx">
+      <DependentUpon>MusteriTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SifreGoster.resx">
+      <DependentUpon>SifreGoster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SifrePaneli.resx">
+      <DependentUpon>SifrePaneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SifrePaneliCalisan.resx">
+      <DependentUpon>SifrePaneliCalisan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalisanTakip.resx">
+      <DependentUpon>CalisanTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takip.resx">
+      <DependentUpon>Takip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uyelik.resx">
+      <DependentUpon>Uyelik.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App1.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ikonumuz.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

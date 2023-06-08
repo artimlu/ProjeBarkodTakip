@@ -1,0 +1,29 @@
+"Server=ns40.kebirhost.com;Database=wwwajan_barkod;Uid=wwwajan_barkod;Pwd='barkod1234';Charset=utf8"
+
+"Server=localhost;Database=wwwajan_barkod;Uid=root;Pwd=;Charset=utf8"
+
+11111111111
+1234
+
+user (yönetici)
+
+kurulum adımları;
+1- xampp server (mysql gerekiyor)
+2- .net framework 4.7 kurulu olması lazım (visual studio kuruluysa zaten bunu kurmuştur, hata verirse elle indirmek lazım)
+
+"Server=ns40.kebirhost.com;Database=wwwajan_barkod;Uid=wwwajan_barkod;Pwd='barkod1234';Charset=utf8"
+
+"Server=localhost;Database=wwwajan_barkod;Uid=root;Pwd=;Charset=utf8"
+
+CTRL H ile gelen ekranın altında "ENTIRE SOLUTION" seçeneği işaretlenerek hepsi elle değiştirilebilir. Ya da hata verirse
+ekranda yaptığım gibi baglan objesine gidip oradaki stringin yine alttaki gibi değiştirilmesi lazım.
+
+4- localhost/phpymadmin ile mysql aryüzüne giriş yapılarak yeni veritabanı oluşturulması gerekiyor.
+veritabanı ismi wwwajan_barkod olacak.
+
+5- wwwajan_barkod veritabanına girdikten sonra üstten içe aktar yapılması gerekiyor
+aktarılacak dosya proje klasöründeki "wwwajan_barkod.sql" dosyası
+
+bu kadar :)
+
+run kısmında program.cs seçili olması önemli "Current Document (Program.cs" seçiliyken başlatmak lazım.
